@@ -14,6 +14,18 @@
       <span>Source:  <a property="dc:source" href="http://bioschemas.org">Bioschemas</a></span>
   </div>
 
+  <div typeof="rdf:Property" resource="http://schema.org/ancestorTaxon">
+      <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
+      <span class="h" property="rdfs:label">ancestorTaxon</span>
+      <span property="rdfs:comment">An ancestor taxa of the taxon in question, but not the closest parent. </span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Taxon">Taxon</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Taxon">Taxon</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
+      <link property="http://schema.org/inverseOf" href="http://schema.org/descendantTaxon"/>
+      <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Taxon">Taxon</a></span>
+  </div>
+
   <div typeof="rdf:Property" resource="http://schema.org/childTaxon">
       <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
       <span class="h" property="rdfs:label">childTaxon</span>
@@ -23,6 +35,18 @@
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
       <link property="http://schema.org/inverseOf" href="http://schema.org/parentTaxon"/>
+      <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Taxon">Taxon</a></span>
+  </div>
+
+  <div typeof="rdf:Property" resource="http://schema.org/descendantTaxon">
+      <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
+      <span class="h" property="rdfs:label">descendantTaxon</span>
+      <span property="rdfs:comment">A descendant taxa of the taxon in question, but not the closest descendant.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Taxon">Taxon</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Taxon">Taxon</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
+      <link property="http://schema.org/inverseOf" href="http://schema.org/ancestorTaxon"/>
       <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Taxon">Taxon</a></span>
   </div>
 
