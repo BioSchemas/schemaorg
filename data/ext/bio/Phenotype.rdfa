@@ -32,4 +32,8 @@
       <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Phenotype">Phenotype</a></span>
   </div>
 
+  <div typeof="rdf:Property" resource="http://schema.org/associatedDisease">
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Phenotype">Phenotype</a></span>
+  </div>
+
 </div>
