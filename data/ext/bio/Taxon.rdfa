@@ -62,6 +62,17 @@
       <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Taxon">Taxon</a></span>
   </div>
 
+  <div typeof="rdf:Property" resource="http://schema.org/scientificName">
+      <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
+      <span class="h" property="rdfs:label">scientificName</span>
+      <span property="rdfs:comment">A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon.</span>
+      <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Taxon">Taxon</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/TaxonName">TaxonName</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
+      <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
+      <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Taxon">Taxon</a></span>
+  </div>
+
   <div typeof="rdf:Property" resource="http://schema.org/taxonRank">
       <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
       <span class="h" property="rdfs:label">taxonRank</span>
