@@ -199,7 +199,8 @@
                 "SequenceMatchingModel.rdfa",
                 "SequenceRange.rdfa",
                 "Study.rdfa",
-                "Taxon.rdfa"
+                "Taxon.rdfa",
+                "TaxonName.rdfa"
             ]
 
         },
