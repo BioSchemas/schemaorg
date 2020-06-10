@@ -14,9 +14,9 @@
       <span>Source:  <a property="dc:source" href="http://bioschemas.org">Bioschemas</a></span>
   </div>
 
-  <div typeof="rdf:Property" resource="http://schema.org/alternativeScientificName">
+  <div typeof="rdf:Property" resource="http://schema.org/alternateScientificName">
       <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
-      <span class="h" property="rdfs:label">alternativeScientificName</span>
+      <span class="h" property="rdfs:label">alternateScientificName</span>
       <span property="rdfs:comment">A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name.</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Taxon">Taxon</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/TaxonName">TaxonName</a></span>
