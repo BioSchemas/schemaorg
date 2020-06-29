@@ -189,6 +189,7 @@
                 "DataRecord.rdfa",
                 "DNA.rdfa",
                 "Enzyme.rdfa",
+                "FormalParameter.rdfa",
                 "Gene.rdfa",
                 "LabProtocol.rdfa",
                 "MolecularEntity.rdfa",
@@ -200,7 +201,8 @@
                 "SequenceRange.rdfa",
                 "Study.rdfa",
                 "Taxon.rdfa",
-                "TaxonName.rdfa"
+                "TaxonName.rdfa",
+		"Workflow.rdfa"
             ]
 
         },
