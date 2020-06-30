@@ -9,7 +9,7 @@
   <div typeof="rdfs:Class" resource="http://schema.org/Workflow">
       <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
       <span class="h" property="rdfs:label">Workflow</span>
-      <span property="rdfs:comment"></span>
+      <span property="rdfs:comment">"A workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information. It can be depicted as a sequence of operations, the work of a person or group, the work of an organization of staff, or one or more simple or complex mechanisms. (source Wikipedia.org)"</span>
       <span>Subclass of: <a property="rdfs:subClassOf" href="http://schema.org/SoftwareSourceCode">SoftwareSourceCode</a></span>
       <span>Source:  <a property="dc:source" href="http://bioschemas.org">Bioschemas</a></span>
   </div>
@@ -25,7 +25,7 @@
   <div typeof="rdf:Property" resource="http://schema.org/input">
       <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
       <span class="h" property="rdfs:label">input</span>
-      <span property="rdfs:comment">An input required to use the workflow (eg. xl spreadsheet, xml file, ...)</span>
+      <span property="rdfs:comment">An input required to use the workflow (eg. spreadsheet, XML file)</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Workflow">Workflow</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/FormalParameter">FormalParameter</a></span>
       <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Workflow">Workflow</a></span>
