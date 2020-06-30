@@ -15,11 +15,11 @@
   </div>
 
   <div typeof="rdf:Property" resource="http://schema.org/softwareRequirements">
-      <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Workflow">Workflow</a></span>
+      <!-- from schema.rdfa 
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/URL">URL</a></span>
-      <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Workflow">Workflow</a></span>
+      -->
   </div>
 
   <div typeof="rdf:Property" resource="http://schema.org/input">
@@ -41,12 +41,13 @@
   </div>
 
   <div typeof="rdf:Property" resource="http://schema.org/funding">
+  <!-- Pending https://github.com/schemaorg/schemaorg/pull/2618
       <link property="http://schema.org/isPartOf" href="http://bio.schema.org" />
+      -->
       <span class="h" property="rdfs:label">funding</span>
       <span property="rdfs:comment">The funding for the workflow</span>
       <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/Workflow">Workflow</a></span>
       <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Grant">Grant</a></span>
-      <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/Workflow">Workflow</a></span>
   </div>
 
 </div>
