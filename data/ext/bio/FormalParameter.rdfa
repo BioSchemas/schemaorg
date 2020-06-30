@@ -16,9 +16,10 @@
 
   <div typeof="rdf:Property" resource="http://schema.org/encodingFormat">
     <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/FormalParameter">FormalParameter</a></span>
+    <!-- from schema.rdfa
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">Text</a></span>
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Text">URL</a></span>
-    <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/FormalParameter">FormalParameter</a></span>
+     -->
   </div>
 
   <div typeof="rdf:Property" resource="http://schema.org/valueRequired">
@@ -30,8 +31,10 @@
 
   <div typeof="rdf:Property" resource="http://schema.org/defaultValue">
     <span>Domain: <a property="http://schema.org/domainIncludes" href="http://schema.org/FormalParameter">FormalParameter</a></span>
+    <!-- from schema.rdfa
+    <span class="h" property="rdfs:label">defaultValue</span>    
     <span>Range: <a property="http://schema.org/rangeIncludes" href="http://schema.org/Thing">Thing</a></span>
-    <span>Source:  <a property="dc:source" href="http://www.bioschemas.org/FormalParameter">FormalParameter</a></span>
+    -->
   </div>
 
 </div>
