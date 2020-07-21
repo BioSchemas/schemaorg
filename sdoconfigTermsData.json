@@ -186,6 +186,7 @@
                 "BioChemStructure.rdfa",
                 "BioSample.rdfa",
                 "ChemicalSubstance.rdfa",
+		"ComputationalWorkflow.rdfa",
                 "DataRecord.rdfa",
                 "DNA.rdfa",
                 "Enzyme.rdfa",
@@ -201,8 +202,7 @@
                 "SequenceRange.rdfa",
                 "Study.rdfa",
                 "Taxon.rdfa",
-                "TaxonName.rdfa",
-		"Workflow.rdfa"
+                "TaxonName.rdfa"
             ]
 
         },
