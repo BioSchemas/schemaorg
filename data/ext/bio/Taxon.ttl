@@ -11,6 +11,15 @@ schema:Taxon
   rdfs:subClassOf schema:Thing ;
   dc:source <http://bioschemas.org> .
 
+schema:alternateScientificName
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "alternateScientificName" ;
+  rdfs:comment "A TaxonName representing a scientific name, with authorship and date information if known, of a synonym of the currently valid (zoological) or accepted (botanical) name." ;
+  schema:domainIncludes schema:Taxon ;
+  schema:rangeIncludes schema:TaxonName, schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/Taxon> .
+
 schema:childTaxon
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
@@ -31,6 +40,15 @@ schema:parentTaxon
   schema:inverseOf schema:childTaxon ;
   dc:source <http://www.bioschemas.org/Taxon> .
 
+schema:scientificName
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "scientificName" ;
+  rdfs:comment "A TaxonName representing the currently valid (zoological) or accepted (botanical) name for that taxon." ;
+  schema:domainIncludes schema:Taxon ;
+  schema:rangeIncludes schema:TaxonName, schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/Taxon> .
+
 schema:taxonRank
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
@@ -39,7 +57,3 @@ schema:taxonRank
   schema:domainIncludes schema:Taxon ;
   schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL ;
   dc:source <http://www.bioschemas.org/Taxon> .
-
-schema:hasDefinedTerm
-  a rdf:Property ;
-  schema:domainIncludes schema:Taxon .
