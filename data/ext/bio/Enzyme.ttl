@@ -1,0 +1,75 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:Enzyme
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "Enzyme" ;
+  rdfs:comment "" ;
+  rdfs:subClassOf schema:BioChemEntity ;
+  dc:source <http://bioschemas.org> .
+
+schema:hasECNumber
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "hasECNumber" ;
+  rdfs:comment "Corresponding Enzyme Commission number." ;
+  schema:domainIncludes schema:Enzyme ;
+  schema:rangeIncludes schema:DefinedTerm, schema:Text ;
+  dc:source <http://www.bioschemas.org/Enzyme> .
+
+schema:hasKineticRate
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "hasKineticRate" ;
+  rdfs:comment "" ;
+  schema:domainIncludes schema:Enzyme ;
+  schema:rangeIncludes schema:Text ;
+  dc:source <http://www.bioschemas.org/Enzyme> .
+
+schema:optimalPH
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "optimalPH" ;
+  rdfs:comment "Optimal PHs." ;
+  schema:domainIncludes schema:Enzyme ;
+  schema:rangeIncludes schema:Number ;
+  dc:source <http://www.bioschemas.org/Enzyme> .
+
+schema:optimalTemperature
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "optimalTemperature" ;
+  rdfs:comment "Optimal temperature in the form '&lt;Number&gt; &lt;Temperature unit of measure&gt;', for example '8 Celsius', at which this enzyme performs best." ;
+  schema:domainIncludes schema:Enzyme ;
+  schema:rangeIncludes schema:Quantity ;
+  dc:source <http://www.bioschemas.org/Enzyme> .
+
+schema:hasCofactor
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "hasCofactor" ;
+  rdfs:comment "Cofactor helping this enzyme to function." ;
+  schema:domainIncludes schema:Enzyme ;
+  schema:rangeIncludes schema:ChemicalSubstance ;
+  dc:source <http://www.bioschemas.org/Enzyme> .
+
+schema:hasCoenzyme
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "hasCoenzyme" ;
+  rdfs:comment "Conenzymes helping this enzyme in turning substrates into products." ;
+  schema:domainIncludes schema:Enzyme ;
+  schema:rangeIncludes schema:BioChemEntity ;
+  dc:source <http://www.bioschemas.org/Enzyme> .
+
+schema:hasAssociatedBioChemEntity
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "hasAssociatedBioChemEntity" ;
+  rdfs:comment "Used to define the actual protein or RNA." ;
+  schema:domainIncludes schema:Enzyme, schema:BioChemStructure ;
+  schema:rangeIncludes schema:Protein, schema:RNA ;
+  dc:source <http://www.bioschemas.org/Enzyme> .

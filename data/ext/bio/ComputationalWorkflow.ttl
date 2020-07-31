@@ -1,0 +1,41 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:ComputationalWorkflow
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "ComputationalWorkflow" ;
+  rdfs:comment "A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows." ;
+  rdfs:subClassOf schema:SoftwareSourceCode ;
+  dc:source <http://bioschemas.org> .
+
+schema:softwareRequirements
+  a rdf:Property ;
+  schema:domainIncludes schema:ComputationalWorkflow .
+
+schema:input
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "input" ;
+  rdfs:comment "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)" ;
+  schema:domainIncludes schema:ComputationalWorkflow ;
+  schema:rangeIncludes schema:FormalParameter ;
+  dc:source <http://www.bioschemas.org/ComputationalWorkflow> .
+
+schema:output
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "output" ;
+  rdfs:comment "An output produced by the computational workflow" ;
+  schema:domainIncludes schema:ComputationalWorkflow ;
+  schema:rangeIncludes schema:FormalParameter ;
+  dc:source <http://www.bioschemas.org/ComputationalWorkflow> .
+
+schema:funding
+  a rdf:Property ;
+  rdfs:label "funding" ;
+  rdfs:comment "The funding for the workflow" ;
+  schema:domainIncludes schema:ComputationalWorkflow ;
+  schema:rangeIncludes schema:Grant .

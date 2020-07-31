@@ -1,0 +1,57 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:SequenceAnnotation
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "SequenceAnnotation" ;
+  rdfs:comment "" ;
+  rdfs:subClassOf schema:BioChemEntity ;
+  dc:source <http://bioschemas.org> .
+
+schema:sequenceValue
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "sequenceValue" ;
+  rdfs:comment "" ;
+  schema:domainIncludes schema:SequenceAnnotation ;
+  schema:rangeIncludes schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/SequenceAnnotation> .
+
+schema:valueReference
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "valueReference" ;
+  rdfs:comment "" ;
+  schema:domainIncludes schema:SequenceAnnotation ;
+  schema:rangeIncludes schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/SequenceAnnotation> .
+
+schema:sequenceLocation
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "sequenceLocation" ;
+  rdfs:comment "A range/position location where this annotation or BioChemEntity is located reagrding another BioChemEntity, for instance a BioChemStructure in a Protein." ;
+  schema:domainIncludes schema:SequenceAnnotation, schema:BioChemStructure ;
+  schema:rangeIncludes schema:SequenceRange ;
+  dc:source <http://www.bioschemas.org/SequenceAnnotation> .
+
+schema:sequenceOrientation
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "sequenceOrientation" ;
+  rdfs:comment "One of 1, 0 or -1." ;
+  schema:domainIncludes schema:SequenceAnnotation ;
+  schema:rangeIncludes schema:Integer ;
+  dc:source <http://www.bioschemas.org/SequenceAnnotation> .
+
+schema:creationMethod
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "creationMethod" ;
+  rdfs:comment "Method used to create or obtain this annotation or BioChemEntity; please use PropertyValue if you want to include any evidence." ;
+  schema:domainIncludes schema:SequenceAnnotation, schema:BioChemStructure ;
+  schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/SequenceAnnotation> .

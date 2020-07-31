@@ -1,0 +1,27 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:FormalParameter
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "FormalParameter" ;
+  rdfs:comment "A FormalParameter is an identified variable used to stand for the actual value(s) that are consumed/produced by a set of steps" ;
+  rdfs:subClassOf schema:Intangible ;
+  dc:source <http://bioschemas.org> .
+
+schema:encodingFormat
+  a rdf:Property ;
+  schema:domainIncludes schema:FormalParameter .
+
+schema:valueRequired
+  a rdf:Property ;
+  rdfs:comment "Whether the input/output must be specified" ;
+  schema:domainIncludes schema:FormalParameter ;
+  schema:rangeIncludes schema:Boolean ;
+  dc:source <http://www.bioschemas.org/FormalParameter> .
+
+schema:defaultValue
+  a rdf:Property ;
+  schema:domainIncludes schema:FormalParameter .

@@ -1,0 +1,30 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:BioChemStructure
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "BioChemStructure" ;
+  rdfs:comment "WwPDB and related data including modelled and hypothetical data. As well as 3D data for chemicals, e.g. stereo chemistry images in an analyzable format (not pure images)." ;
+  rdfs:subClassOf schema:BioChemEntity ;
+  dc:source <http://bioschemas.org> .
+
+schema:massResolution
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "massResolution" ;
+  rdfs:comment "Mass spectometry resolution in the form '&lt;Number&gt; &lt;Unit of measure&gt;', for example '2.85 Å'" ;
+  schema:domainIncludes schema:BioChemStructure ;
+  schema:rangeIncludes schema:Quantity ;
+  dc:source <http://www.bioschemas.org/BioChemStructure> .
+
+schema:boundMolecule
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "boundMolecule" ;
+  rdfs:comment "Molecule, e.g., ligand, bound to this BioChem structure" ;
+  schema:domainIncludes schema:BioChemStructure ;
+  schema:rangeIncludes schema:BioChemEntity, schema:DefinedTerm, schema:ChemicalSubstance, schema:MolecularEntity, schema:URL ;
+  dc:source <http://www.bioschemas.org/BioChemStructure> .

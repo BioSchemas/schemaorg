@@ -1,0 +1,57 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:SequenceMatchingModel
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "SequenceMatchingModel" ;
+  rdfs:comment "A model used to determine sequence matches such as domains in proteins." ;
+  rdfs:subClassOf schema:CreativeWork ;
+  dc:source <http://bioschemas.org> .
+
+schema:modelDataset
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "modelDataset" ;
+  rdfs:comment "Dataset where this matching model has been recorded." ;
+  schema:domainIncludes schema:SequenceMatchingModel ;
+  schema:rangeIncludes schema:Dataset ;
+  dc:source <http://www.bioschemas.org/SequenceMatchingModel> .
+
+schema:biologicalType
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "biologicalType" ;
+  rdfs:comment "Biological type targeted by this model, for instance domains or sites in proteins." ;
+  schema:domainIncludes schema:SequenceMatchingModel ;
+  schema:rangeIncludes schema:BioChemEntity, schema:DefinedTerm, schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/SequenceMatchingModel> .
+
+schema:modelSignature
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "modelSignature" ;
+  rdfs:comment "Representation of the model such as regular expresion or image." ;
+  schema:domainIncludes schema:SequenceMatchingModel ;
+  schema:rangeIncludes schema:Image, schema:PropertyValue, schema:Text ;
+  dc:source <http://www.bioschemas.org/SequenceMatchingModel> .
+
+schema:match
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "match" ;
+  rdfs:comment "Entity matched by this model, for instance proteins where the domain targeted by this model are found. " ;
+  schema:domainIncludes schema:SequenceMatchingModel ;
+  schema:rangeIncludes schema:todo ;
+  schema:inverseOf schema:isMatchedBy ;
+  dc:source <http://www.bioschemas.org/SequenceMatchingModel> .
+
+schema:isBasisFor
+  a rdf:Property ;
+  rdfs:label "isBasisFor" ;
+  rdfs:comment "A resource that was (somehow) created using this resource as a basis for. " ;
+  schema:domainIncludes schema:CreativeWork ;
+  schema:rangeIncludes schema:CreativeWork ;
+  schema:inverseOf schema:isBasedOn .

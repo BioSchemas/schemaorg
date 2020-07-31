@@ -197,12 +197,27 @@
             "contentLocation": "[[VOCABDEFLOC]]/data/ext/bio",
             "contentFile": [
                 "BioChemEntity.ttl",
+                "BioChemStructure.ttl",
                 "BioSample.ttl",
                 "ChemicalSubstance.ttl",
+                "ComputationalWorkflow.ttl",
+                "DNA.ttl",
+                "DataRecord.ttl",
+                "Enzyme.ttl",
+                "FormalParameter.ttl",
                 "Gene.ttl",
+                "LabProtocol.ttl",
                 "MolecularEntity.ttl",
+                "Phenotype.ttl",
                 "Protein.ttl",
-                "Taxon.ttl"
+                "RNA.ttl",
+                "Sample.ttl",
+                "SequenceAnnotation.ttl",
+                "SequenceMatchingModel.ttl",
+                "SequenceRange.ttl",
+                "Study.ttl",
+                "Taxon.ttl",
+                "TaxonName.ttl"
             ]
 
         },

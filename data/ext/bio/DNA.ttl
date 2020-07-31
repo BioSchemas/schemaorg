@@ -1,0 +1,33 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:DNA
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "DNA" ;
+  rdfs:comment "" ;
+  rdfs:subClassOf schema:BioChemEntity ;
+  dc:source <http://bioschemas.org> .
+
+schema:encodesBioChemEntity
+  schema:domainIncludes schema:DNA.
+
+schema:hasSequence
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "hasSequence" ;
+  rdfs:comment "Nucleotide or amino acid sequence." ;
+  schema:domainIncludes schema:DNA ;
+  schema:rangeIncludes schema:Text ;
+  dc:source <http://www.bioschemas.org/DNA> .
+
+schema:topology
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "occurence" ;
+  rdfs:comment "One of Linear|Circular|Unspecified" ;
+  schema:domainIncludes schema:DNA ;
+  schema:rangeIncludes schema:Text ;
+  dc:source <http://www.bioschemas.org/DNA> .

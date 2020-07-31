@@ -1,0 +1,64 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:Phenotype
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "Phenotype" ;
+  rdfs:comment "A phenotype" ;
+  rdfs:subClassOf schema:Thing ;
+  dc:source <http://bioschemas.org> .
+
+schema:anatomicalLocation
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "anatomicalLocation" ;
+  rdfs:comment "Any part of an organism, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical locations." ;
+  schema:domainIncludes schema:Phenotype ;
+  schema:rangeIncludes schema:DefinedTerm, schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/Phenotype> .
+
+schema:associatedDisease
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  schema:domainIncludes schema:Phenotype .
+
+schema:bioChemAssociation
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "bioChemAssociation" ;
+  rdfs:comment "BioChemEntity, e.g., gene, associated to this Phenotype and relevant for its characterization, particularly useful for the molecular basis of this Phenotype." ;
+  schema:domainIncludes schema:Phenotype ;
+  schema:rangeIncludes schema:BioChemEntity ;
+  dc:source <http://www.bioschemas.org/Phenotype> .
+
+schema:hasMolecularFunction
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  schema:domainIncludes schema:Phenotype .
+
+schema:isInvolvedInBiologicalProcess
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  schema:domainIncludes schema:Phenotype .
+
+schema:isLocatedInSubcellularLocation
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  schema:domainIncludes schema:Phenotype .
+
+schema:taxonomicRange
+  schema:domainIncludes schema:Phenotype .
+
+schema:valueReference
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  schema:domainIncludes schema:Phenotype ;
+  schema:rangeIncludes schema:DefinedTerm ;
+  dc:source <http://www.bioschemas.org/Phenotype> .
+
+schema:additionalProperty
+  a rdf:Property ;
+  schema:domainIncludes schema:Phenotype .

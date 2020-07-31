@@ -1,0 +1,27 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:RNA
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "RNA" ;
+  rdfs:comment "" ;
+  rdfs:subClassOf schema:BioChemEntity ;
+  dc:source <http://bioschemas.org> .
+
+schema:encodesBioChemEntity
+  schema:domainIncludes schema:RNA.
+
+schema:hasSequence
+  schema:domainIncludes schema:RNA.
+
+schema:isCodingRNA
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "isCodingRNA" ;
+  rdfs:comment "Indicates whether or not this RNA is a coding one." ;
+  schema:domainIncludes schema:RNA ;
+  schema:rangeIncludes schema:Boolean ;
+  dc:source <http://www.bioschemas.org/RNA> .

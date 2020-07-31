@@ -1,0 +1,48 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:SequenceRange
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "SequenceRange" ;
+  rdfs:comment "" ;
+  rdfs:subClassOf schema:BioChemEntity ;
+  dc:source <http://bioschemas.org> .
+
+schema:rangeStart
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "rangeStart" ;
+  rdfs:comment "Initial position of the range." ;
+  schema:domainIncludes schema:SequenceRange ;
+  schema:rangeIncludes schema:Integer ;
+  dc:source <http://www.bioschemas.org/SequenceRange> .
+
+schema:startUncertainty
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "startUncertainty" ;
+  rdfs:comment "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of '&lt;' (any position before than rangeStart), '&gt;' (any position after rangeStart), '~' (around the rangeStart), '[#-#] (to indicate a range where rangeStart could be located)'." ;
+  schema:domainIncludes schema:SequenceRange ;
+  schema:rangeIncludes schema:Text ;
+  dc:source <http://www.bioschemas.org/SequenceRange> .
+
+schema:rangeEnd
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "rangeEnd" ;
+  rdfs:comment "Final position of the range" ;
+  schema:domainIncludes schema:SequenceRange ;
+  schema:rangeIncludes schema:Integer ;
+  dc:source <http://www.bioschemas.org/SequenceRange> .
+
+schema:endUncertainty
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "endUncertainty" ;
+  rdfs:comment "If the initial position is not known with reasonable certainty, specify here the uncertainty type as one of '&lt;' (any position before than rangeEnd), '&gt;' (any position after rangeEnd), '~' (around rangeEnd), '[#-#] (to indicate a range where rangeEnd could be located)'." ;
+  schema:domainIncludes schema:SequenceRange ;
+  schema:rangeIncludes schema:Text ;
+  dc:source <http://www.bioschemas.org/SequenceRange> .

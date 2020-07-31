@@ -1,0 +1,25 @@
+# Schema.org Bioschemas extension proposal
+# Project: https://bioschemas.org
+# MailingList: https://lists.w3.org/Archives/Public/public-bioschemas/
+# Issue: https://github.com/BioSchemas/specifications/issues/307
+
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:DataRecord
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "DataRecord" ;
+  rdfs:comment "A DataRecord is a part of a Dataset. Not all datasets naturally fall into parts, and some kinds of datasets (eg. relational and tabular) can be mapped into different senses of \"data record\". Although data records can themselves be viewed as datasets, for simplicity we do not declare this explicitly; if this perspective is needed it can be added using multiple typing." ;
+  rdfs:subClassOf schema:CreativeWork ;
+  dc:source <http://bioschemas.org> .
+
+schema:includedInDataset
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "includedInDataset" ;
+  rdfs:comment "A Dataset which contains this DataRecord." ;
+  schema:domainIncludes schema:DataRecord ;
+  schema:rangeIncludes schema:Dataset .

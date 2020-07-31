@@ -1,0 +1,30 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:Study
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "Study" ;
+  rdfs:comment "" ;
+  rdfs:subClassOf schema:CreativeWork ;
+  dc:source <http://bioschemas.org> .
+
+schema:studyDomain
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "studyDomain" ;
+  rdfs:comment "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference." ;
+  schema:domainIncludes schema:Study ;
+  schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/Study> .
+
+schema:studyProcess
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "studyProcess" ;
+  rdfs:comment "A process performed as part of an experiment or wider study, i.e. intentionally designed. These processes can have ontology URL attached to." ;
+  schema:domainIncludes schema:Study ;
+  schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL ;
+  dc:source <http://www.bioschemas.org/Study> .

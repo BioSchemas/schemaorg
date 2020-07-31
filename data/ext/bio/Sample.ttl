@@ -1,0 +1,18 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:Sample
+  a rdfs:Class ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "Sample" ;
+  rdfs:comment """A material entity that is representative of a whole.
+
+      Comments: Typically samples are intended to be representative of the whole or aspects thereof. Examples of samples include biomedical samples (blood, urine) and commercial samples (carpet, metal).""" ;
+  rdfs:subClassOf schema:Thing ;
+  dc:source <http://bioschemas.org> .
+
+schema:additionalProperty
+  a rdf:Property ;
+  schema:domainIncludes schema:Sample .
