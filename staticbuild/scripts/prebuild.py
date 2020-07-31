@@ -102,7 +102,7 @@ setAppVar("DEBUGOUT","<!-- Build for version: %s -->\n<!-- Build date: %s -->\n<
 
 
 setAppVar("LocationOverride","docs")
-for ext in ["","auto","bib","health-lifesci","meta","pending","iot","attic"]:
+for ext in ["","auto","bib","health-lifesci","meta","pending","iot","attic","bio"]:
     setHostExt(ext)
     log.info("Build Homepage: %s" % ext)
     unit.handleHomepage("/")

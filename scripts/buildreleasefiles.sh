@@ -2,7 +2,7 @@
 set -e
 set -u
 
-EXTENSIONS="attic auto bib health-lifesci pending meta"
+EXTENSIONS="attic auto bib health-lifesci pending meta bio"
 PWD=`pwd`
 PROG="`basename $0`"
 if [ `basename "$PWD"` != "schemaorg" ]
