@@ -11,98 +11,180 @@ schema:LabProtocol
   rdfs:subClassOf schema:CreativeWork ;
   dc:source <http://bioschemas.org> .
 
-schema:executionTime
+
+
+
+
+schema:bioSampleUsed
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "executiontime" ;
-  rdfs:comment "The time it takes to actually carry out the protocol in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)." ;
+  rdfs:label "bioSampleUsed" ;
+  rdfs:comment "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used." ;
   schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:Duration ;
+  schema:rangeIncludes schema:BioChemEntity, schema:BioSample, schema:DefinedTerm, schema:Text, schema:URL schema:Taxon, ;
   dc:source <http://www.bioschemas.org/LabProtocol> .
 
-schema:labEquipment
+schema:keywords
+  a rdf:Property ;
+  rdfs:label "keywords" ;
+  rdfs:comment "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:Text .
+
+schema:labEquipmentUsed
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "labEquipment" ;
-  rdfs:comment "For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol." ;
+  rdfs:label "labEquipmentUsed" ;
+  rdfs:comment "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol." ;
   schema:domainIncludes schema:LabProtocol ;
   schema:rangeIncludes schema:DefinedTerm, schema:Text, schema:URL ;
   dc:source <http://www.bioschemas.org/LabProtocol> .
 
-schema:reagent
+schema:protocolPurpose
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "reagent" ;
-  rdfs:comment "Reagent used in the protocol. It can be a record in a Dataset describing the reagent or a BioChemEntity corresponding to the reagent or a URL pointing to the type of reagent used. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)." ;
+  rdfs:label "protocolPurpose" ;
+  rdfs:comment "The purpose of the protocol enables readers to make a decision as to the suitability of the protocol to their experimental problem. (see more information at http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#PurposeOfProtocol)." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:CreativeWork, schema:Text ;
+  dc:source <http://www.bioschemas.org/LabProtocol> .
+
+schema:reagentUsed
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "reagentUsed" ;
+  rdfs:comment "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)." ;
   schema:domainIncludes schema:LabProtocol ;
   schema:rangeIncludes schema:BioChemEntity, schema:DefinedTerm, schema:Text, schema:URL ;
-  dc:source <http://www.bioschemas.org/LabProtocol> .
+  dc:source <http://www.bioschemas.org/LabProtocol> .  
 
-schema:sampleUsed
-  a rdf:Property ;
-  schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "sampleUsed" ;
-  rdfs:comment "Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:BioChemEntity, schema:DefinedTerm, schema:BioSample, schema:Text, schema:URL ;
-  dc:source <http://www.bioschemas.org/LabProtocol> .
 
-schema:software
+
+
+
+schema:author
   a rdf:Property ;
-  schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "software" ;
-  rdfs:comment "Software or tool used as part of the lab protocol to complete a part of it." ;
+  rdfs:label "author" ;
+  rdfs:comment "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably." ;
   schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:SoftwareApplication ;
-  dc:source <http://www.bioschemas.org/LabProtocol> .
+  schema:rangeIncludes schema:Organizaton, schema:Person .  
+
+schema:citation
+  a rdf:Property ;
+  rdfs:label "citation" ;
+  rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:CreativeWork, schema:Text .    
+
+schema:identifier
+  a rdf:Property ;
+  rdfs:label "identifier" ;
+  rdfs:comment "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL . 
+
+schema:isPartOf
+  a rdf:Property ;
+  rdfs:label "isPartOf" ;
+  rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:CreativeWork, schema:URL .  
+
+schema:license
+  a rdf:Property ;
+  rdfs:label "license" ;
+  rdfs:comment "A license document that applies to this content, typically indicated by URL." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:CreativeWork, schema:URL . 
 
 schema:protocolAdvantage
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
   rdfs:label "protocolAdvantage" ;
-  rdfs:comment "Situations where the Protocol has been successfully employed." ;
+  rdfs:comment "Situations where the Protocol has been successfully employed (see more information at http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol)" ;
   schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork ;
-  dc:source <http://www.bioschemas.org/LabProtocol> .
-
-schema:protocolLimitation
-  a rdf:Property ;
-  schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "protocolLimitation" ;
-  rdfs:comment "Situations where the Protocol would be unreliable or otherwise unsuccessful." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork ;
+  schema:rangeIncludes schema:CreativeWork, schema:Text ;
   dc:source <http://www.bioschemas.org/LabProtocol> .
 
 schema:protocolApplication
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "protocolLimitation" ;
-  rdfs:comment "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc." ;
+  rdfs:label "protocolApplication" ;
+  rdfs:comment "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. (see more information at http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol)" ;
   schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork ;
-  dc:source <http://www.bioschemas.org/LabProtocol> .
+  schema:rangeIncludes schema:CreativeWork, schema:Text ;
+  dc:source <http://www.bioschemas.org/LabProtocol> .  
+
+schema:protocolLimitation
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "protocolLimitation" ;
+  rdfs:comment "Situations where the Protocol would be unreliable or otherwise unsuccessful (see more information at http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol)" ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:CreativeWork, schema:Text ;
+  dc:source <http://www.bioschemas.org/LabProtocol> .  
 
 schema:protocolOutcome
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
-  rdfs:label "protocolLimitation" ;
-  rdfs:comment "Outcome or expected result by a protocol execution." ;
+  rdfs:label "protocolOutcome" ;
+  rdfs:comment "Outcome or expected result by a protocol execution (see more information at http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol)" ;
   schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork ;
-  dc:source <http://www.bioschemas.org/LabProtocol> .
+  schema:rangeIncludes schema:CreativeWork, schema:Text ;
+  dc:source <http://www.bioschemas.org/LabProtocol> .  
 
-schema:purpose
+schema:softwareUsed
   a rdf:Property ;
-  rdfs:label "purpose" ;
-  rdfs:comment "A goal towards an action is taken. Can be concrete or abstract." ;
-  schema:domainIncludes schema:AllocateAction, schema:LabProtocol, schema:MedicalDevice, schema:PayAction ;
-  schema:rangeIncludes schema:MedicalDevicePurpose, schema:Text, schema:Thing ;
-  schema:isPartOf <http://health-lifesci.schema.org> .
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "softwareUsed" ;
+  rdfs:comment "Software or tool used as part of the lab protocol to complete a part of it." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:SoftwareApplication, schema:URL ;
+  dc:source <http://www.bioschemas.org/LabProtocol> .  
 
 schema:step
   a rdf:Property ;
   rdfs:label "step" ;
   rdfs:comment "A single step item (as HowToStep, text, document, video, etc.) or a HowToSection." ;
-  schema:domainIncludes schema:HowTo, schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork, schema:HowToSection, schema:HowToStep, schema:Text .
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:CreativeWork, schema:HowToSection, schema:HowToStep, schema:Text . 
+
+schema:totalTime
+  a rdf:Property ;
+  rdfs:label "totalTime" ;
+  rdfs:comment "The total time required to perform instructions or a direction (including time to prepare the supplies), in ISO 8601 duration format." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:Duration . 
+
+
+
+
+
+schema:dateCreated
+  a rdf:Property ;
+  rdfs:label "dateCreated" ;
+  rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:Date, schema:DateTime .
+
+schema:dateModified
+  a rdf:Property ;
+  rdfs:label "dateModified" ;
+  rdfs:comment "The date on which the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:Date, schema:DateTime .
+
+schema:datePublished
+  a rdf:Property ;
+  rdfs:label "datePublished" ;
+  rdfs:comment "Date of first broadcast/publication." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:Date, schema:DateTime .  
+
+schema:isBasedOn
+  a rdf:Property ;
+  rdfs:label "isBasedOn" ;
+  rdfs:comment "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:CreativeWork, schema:Product, schema:URL .  
+
