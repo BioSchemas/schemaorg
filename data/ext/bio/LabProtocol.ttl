@@ -24,13 +24,6 @@ schema:bioSampleUsed
   schema:rangeIncludes schema:BioChemEntity, schema:BioSample, schema:DefinedTerm, schema:Text, schema:URL schema:Taxon, ;
   dc:source <http://www.bioschemas.org/LabProtocol> .
 
-schema:keywords
-  a rdf:Property ;
-  rdfs:label "keywords" ;
-  rdfs:comment "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:Text .
-
 schema:labEquipmentUsed
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
@@ -60,42 +53,7 @@ schema:reagentUsed
 
 
 
-
-
-schema:author
-  a rdf:Property ;
-  rdfs:label "author" ;
-  rdfs:comment "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:Organizaton, schema:Person .  
-
-schema:citation
-  a rdf:Property ;
-  rdfs:label "citation" ;
-  rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork, schema:Text .    
-
-schema:identifier
-  a rdf:Property ;
-  rdfs:label "identifier" ;
-  rdfs:comment "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL . 
-
-schema:isPartOf
-  a rdf:Property ;
-  rdfs:label "isPartOf" ;
-  rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork, schema:URL .  
-
-schema:license
-  a rdf:Property ;
-  rdfs:label "license" ;
-  rdfs:comment "A license document that applies to this content, typically indicated by URL." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork, schema:URL . 
+     
 
 schema:protocolAdvantage
   a rdf:Property ;
@@ -142,12 +100,6 @@ schema:softwareUsed
   schema:rangeIncludes schema:SoftwareApplication, schema:URL ;
   dc:source <http://www.bioschemas.org/LabProtocol> .  
 
-schema:step
-  a rdf:Property ;
-  rdfs:label "step" ;
-  rdfs:comment "A single step item (as HowToStep, text, document, video, etc.) or a HowToSection." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork, schema:HowToSection, schema:HowToStep, schema:Text . 
 
 schema:totalTime
   a rdf:Property ;
@@ -160,31 +112,4 @@ schema:totalTime
 
 
 
-schema:dateCreated
-  a rdf:Property ;
-  rdfs:label "dateCreated" ;
-  rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:Date, schema:DateTime .
-
-schema:dateModified
-  a rdf:Property ;
-  rdfs:label "dateModified" ;
-  rdfs:comment "The date on which the CreativeWork was most recently modified or when the item’s entry was modified within a DataFeed." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:Date, schema:DateTime .
-
-schema:datePublished
-  a rdf:Property ;
-  rdfs:label "datePublished" ;
-  rdfs:comment "Date of first broadcast/publication." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:Date, schema:DateTime .  
-
-schema:isBasedOn
-  a rdf:Property ;
-  rdfs:label "isBasedOn" ;
-  rdfs:comment "A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl." ;
-  schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:CreativeWork, schema:Product, schema:URL .  
 
