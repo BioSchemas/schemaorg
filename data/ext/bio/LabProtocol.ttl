@@ -21,7 +21,7 @@ schema:bioSampleUsed
   rdfs:label "bioSampleUsed" ;
   rdfs:comment "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used." ;
   schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:BioChemEntity, schema:BioSample, schema:DefinedTerm, schema:Text, schema:URL, schema:Taxon, ;
+  schema:rangeIncludes schema:BioChemEntity, schema:BioSample, schema:DefinedTerm, schema:Text, schema:URL, schema:Taxon ;
   dc:source <http://www.bioschemas.org/LabProtocol> .
 
 schema:labEquipmentUsed
