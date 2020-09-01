@@ -46,9 +46,9 @@ schema:reagentUsed
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
   rdfs:label "reagentUsed" ;
-  rdfs:comment "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable (URL if possible)." ;
+  rdfs:comment "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as ‘A substance used in a chemical reaction to detect, measure, examine, or produce other substances’ in CHEBI:33893" ;
   schema:domainIncludes schema:LabProtocol ;
-  schema:rangeIncludes schema:BioChemEntity, schema:DefinedTerm, schema:Text, schema:URL ;
+  schema:rangeIncludes schema:BioChemEntity, schema:MolecularEntity, schema:ChemicalSubstance, schema:DefinedTerm, schema:Text, schema:URL ;
   dc:source <http://www.bioschemas.org/LabProtocol> .  
 
 
@@ -59,7 +59,7 @@ schema:protocolAdvantage
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
   rdfs:label "protocolAdvantage" ;
-  rdfs:comment "Situations where the Protocol has been successfully employed (see more information at http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol)" ;
+  rdfs:comment "Situations where the Protocol has been successfully employed including advantageous elements (e.g. better yield, shorter running time) (see more information at http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol)" ;
   schema:domainIncludes schema:LabProtocol ;
   schema:rangeIncludes schema:CreativeWork, schema:Text ;
   dc:source <http://www.bioschemas.org/LabProtocol> .
@@ -100,6 +100,20 @@ schema:softwareUsed
   schema:rangeIncludes schema:SoftwareApplication, schema:URL ;
   dc:source <http://www.bioschemas.org/LabProtocol> .  
 
+
+schema:performTime
+  a rdf:Property ;
+  rdfs:label "performTime" ;
+  rdfs:comment "The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in ISO 8601 duration format." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:Duration . 
+
+schema:prepTime
+  a rdf:Property ;
+  rdfs:label "prepTime" ;
+  rdfs:comment "The length of time it takes to prepare the items to be used in instructions or a direction, in ISO 8601 duration format." ;
+  schema:domainIncludes schema:LabProtocol ;
+  schema:rangeIncludes schema:Duration . 
 
 schema:totalTime
   a rdf:Property ;
