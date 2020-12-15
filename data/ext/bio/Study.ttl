@@ -28,3 +28,7 @@ schema:studyProcess
   schema:domainIncludes schema:Study ;
   schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL ;
   dc:source <http://www.bioschemas.org/Study> .
+
+schema:studySubject
+  schema:domainIncludes schema:Study ;
+  schema:rangeIncludes schema:BioChemEntity .
