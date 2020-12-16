@@ -39,7 +39,8 @@ schema:studyDomain
   dc:source <http://www.bioschemas.org/Study> .
 
 schema:studyLocation
-  schema:domainIncludes schema:Study .
+  schema:domainIncludes schema:Study ;
+  schema:rangeIncludes schema:Place .
 
 schema:studyProcess
   a rdf:Property ;
