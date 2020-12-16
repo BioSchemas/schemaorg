@@ -11,6 +11,9 @@ schema:Study
   rdfs:subClassOf schema:CreativeWork ;
   dc:source <http://bioschemas.org> .
 
+schema:additionalProperty
+  schema:domainIncludes schema:Study .
+
 schema:relatedStudy
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
