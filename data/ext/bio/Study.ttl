@@ -38,6 +38,9 @@ schema:studyDomain
   schema:rangeIncludes schema:PropertyValue, schema:Text, schema:URL ;
   dc:source <http://www.bioschemas.org/Study> .
 
+schema:studyLocation
+  schema:domainIncludes schema:Study .
+
 schema:studyProcess
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
