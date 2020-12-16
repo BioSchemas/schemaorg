@@ -11,6 +11,15 @@ schema:Study
   rdfs:subClassOf schema:CreativeWork ;
   dc:source <http://bioschemas.org> .
 
+schema:relatedStudy
+  a rdf:Property ;
+  schema:isPartOf <http://bio.schema.org> ;
+  rdfs:label "relatedStudy" ;
+  rdfs:comment "A study that is related to this one." ;
+  schema:domainIncludes schema:Study ;
+  schema:rangeIncludes schema:Study ;
+  dc:source <http://www.bioschemas.org/Study> .
+
 schema:studyDomain
   a rdf:Property ;
   schema:isPartOf <http://bio.schema.org> ;
